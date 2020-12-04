@@ -7,7 +7,21 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var app = express();
+var app = express
+
+// DB Connection
+
+const mongoose = require('mongoose')
+mongoose.connect('mongodb+srv://diegoaestrada:<GeorgianCollege2020>@clusterdaeb.eve7d.mongodb.net/services',{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(
+    (res) =>
+    {
+        console.log('Connection to Mongo DB')
+    }).catch (() => {
+    console.log('Connection Error')
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
