@@ -13,15 +13,14 @@ var app = express
 // DB Connection
 const mongoose = require('mongoose');
 
-await mongoose.connect('mongodb+srv://diegoaestrada:GeorgianCollege2020@clusterdaeb.eve7d.mongodb.net/services', {
+/*await mongoose.connect('mongodb+srv://diegoaestrada:GeorgianCollege2020@clusterdaeb.eve7d.mongodb.net/services', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true
-});
+    
+});*/
 
 //const globals = require ('./config/globals')
-/*
+
 mongoose.connect('mongodb+srv://diegoaestrada:GeorgianCollege2020@clusterdaeb.eve7d.mongodb.net/services',
     {
         useNewUrlParser: true,
@@ -35,7 +34,6 @@ mongoose.connect('mongodb+srv://diegoaestrada:GeorgianCollege2020@clusterdaeb.ev
             console.log('Connection Error')
         }
     )
-*/
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
