@@ -21,4 +21,14 @@ router.get('/contact', function (req, res, next) {
     res.render('contact', { title: 'DaebServices - Contact Us' });
 });
 
+/* GET Services page. */
+router.get('/login', function (req, res, next) {
+    res.render('login', { title: 'DaebServices - login' });
+});
+
+/* GET Services page. */
+router.get('/location', function (req, res, next) {
+    res.render('location', { title: 'DaebServices - Util Info and Tools' });
+});
+
 module.exports = router;
