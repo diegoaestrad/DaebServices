@@ -9,11 +9,20 @@ var usersRouter = require('./routes/users');
 
 var app = express
 
-// DB Connection
 
-const mongoose = require('mongoose')
-const globals = require ('./config/globals')
-mongoose.connect('mongodb+srv://diegoaestrada:<GeorgianCollege2020>@clusterdaeb.eve7d.mongodb.net/services',
+// DB Connection
+const mongoose = require('mongoose');
+
+await mongoose.connect('mongodb+srv://diegoaestrada:GeorgianCollege2020@clusterdaeb.eve7d.mongodb.net/services', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true
+});
+
+//const globals = require ('./config/globals')
+/*
+mongoose.connect('mongodb+srv://diegoaestrada:GeorgianCollege2020@clusterdaeb.eve7d.mongodb.net/services',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
@@ -26,7 +35,7 @@ mongoose.connect('mongodb+srv://diegoaestrada:<GeorgianCollege2020>@clusterdaeb.
             console.log('Connection Error')
         }
     )
-
+*/
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
