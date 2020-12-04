@@ -12,16 +12,20 @@ var app = express
 // DB Connection
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://diegoaestrada:<GeorgianCollege2020>@clusterdaeb.eve7d.mongodb.net/services',{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(
-    (res) =>
+const globals = require ('./config/globals')
+mongoose.connect('mongodb+srv://diegoaestrada:<GeorgianCollege2020>@clusterdaeb.eve7d.mongodb.net/services',
     {
-        console.log('Connection to Mongo DB')
-    }).catch (() => {
-    console.log('Connection Error')
-})
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    }).then(
+        (res) =>
+        {
+            console.log('Connection to Mongo DB')
+        }).catch(() =>
+        {
+            console.log('Connection Error')
+        }
+    )
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
