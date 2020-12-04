@@ -9,6 +9,30 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+
+// database Daeb
+// Using Node.js `require()`
+const mongoose = require('mongoose')
+
+mongoose.connect('mongodb+srv://diegoaestrada:Abc123!@clusterdaeb.eve7d.mongodb.net/admin',
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    }).then(
+        (res) => {
+            console.log('Connected to MongoDB')
+        }
+    ).catch(() => {
+        console.log('No Connection to MongoDB')
+    })
+    
+
+
+
+
+
+//end sb section Daeb
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
