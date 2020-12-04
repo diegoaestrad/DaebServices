@@ -13,8 +13,9 @@ var app = express();
 // database Daeb
 // Using Node.js `require()`
 const mongoose = require('mongoose')
+const globals = require('./config/globals')
 
-mongoose.connect('mongodb+srv://diegoaestrada:Abc123!@clusterdaeb.eve7d.mongodb.net/admin',
+mongoose.connect(globals.db,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
