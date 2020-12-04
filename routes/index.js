@@ -12,8 +12,8 @@ router.get('/services', function (req, res, next) {
 });
 
 /* GET Services page. */
-router.get('/aboutus', function (req, res, next) {
-    res.render('aboutus', { title: 'DaebServices - About US' });
+router.get('/about', function (req, res, next) {
+    res.render('about', { title: 'DaebServices - About US' });
 });
 
 /* GET Services page. */
