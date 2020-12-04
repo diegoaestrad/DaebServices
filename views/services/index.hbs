@@ -1,31 +1,34 @@
-<h1>Services</h1>
+<h1>Services page</h1>
 
-<a href="/services/add"> Add a New Service</a>
+<a href="/services/add"> Add a New service</a>
+
+{{#each services}}
+{{this.name}}
+<br />
+{{/each}}
+
+
 <table class="table table-striped table-hover">
-    <tr>
-        <th>Name</th>
-        <th>province</th>
-        <th>user</th>
-        <th>phone</th>
-        <th>mail</th>
-        <th>image</th>
-    </tr>
+	<tr>
+		<th>Name</th>
+		<th>province</th>
+		<th>mail</th>
+	</tr>
 
-    {{#each services}}
-<tr>
-    <td> {{this.name}} </td>
-    <td> {{this.province}} </td>
-    <td> {{this.user}} </td>
-    <td> {{this.phone}} </td>
-    <td> {{this.mail}} </td>
-    <td> {{this.image}} </td>
-    <td>
-        <!--this._id is the MongoDB primary key for each specific task -->
-        <a href="/services/edit/{{ this._id }}"> Edit </a>|
-        <a href="/services/delete/{{ this._id }}" class="text-danger delete"> Delete </a>
-    </td>
-</tr>
 
-    {{/each}}
+	{{#each services}}
+	<tr>
+		<td> {{this.name}} </td>
+		<td> {{this.province}} </td>
+		<td> {{this.mail}} </td>
+		<td>
+			-->
+			<!--this._id is the MongoDB primary key for each specific service -->
+			<!--<a href="/services/edit/{{ this._id }}"> Edit </a>|
+						<a href="/services/delete/{{ this._id }}" class="text-danger delete"> Delete </a>
+					</td>
+				</tr>
+				{{/each}}
 
-</table>
+			</table>
+
