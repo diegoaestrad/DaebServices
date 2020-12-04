@@ -1,0 +1,9 @@
+{
+  "name": "daeb-services",
+  "version": "0.0.0",
+  "description": "DaebServices",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}
